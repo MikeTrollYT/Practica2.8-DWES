@@ -1,6 +1,6 @@
 # TESTING.md — Casos de prueba manuales del Tablón de anuncios
 
-**URLs de la práctica:** web en `http://localhost:8080` · phpMyAdmin en `http://localhost:8081` (usuario `root`, contraseña `root`).
+**URLs de la práctica:** web en `http://localhost:8080` · phpMyAdmin en `http://localhost:8081` (usuario `root`, contraseña `josech123`).
 
 **Preparación recomendada:** necesitas **dos usuarios** (Usuario A y Usuario B) para probar la autorización. Usa un navegador normal para A y una ventana de incógnito (o un segundo navegador) para B, porque cada uno tiene su propia sesión.
 
@@ -91,7 +91,7 @@
 
 ---
 
-### 2.4 Nombre de usuario duplicado
+### 2.2 Nombre de usuario duplicado
 - **Pasos:** intenta registrar un usuario con un `username` ya existente y un email distinto.
 - **Esperado:** el mismo mensaje de error que en 2.3.
 - **Resultado:** `[X]`
@@ -131,7 +131,7 @@
 ### 4.1 Listado de anuncios
 - **Pasos:** crea al menos 3 anuncios con distintos títulos y categorías y abre `/posts`.
 - **Esperado:** aparecen todos, con título (enlazado) y categoría.
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -142,7 +142,7 @@
 ### 4.2 Listado vacío
 - **Pasos:** con la tabla `posts` vacía, abre `/posts`.
 - **Esperado:** aparece "No hay anuncios." sin errores.
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -153,7 +153,7 @@
 ### 4.3 Ver un anuncio
 - **Pasos:** pulsa el título de un anuncio del listado.
 - **Esperado:** la URL es `/posts/<id>` y se ven título, categoría, fecha y contenido. Los saltos de línea del contenido se respetan.
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -164,7 +164,7 @@
 ### 4.4 Anuncio inexistente
 - **Pasos:** abre `/posts/9999`.
 - **Esperado:** página "Error 404 – El anuncio no existe.".
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -177,7 +177,7 @@
 ### 5.1 Crear sin estar logueado
 - **Pasos:** sin sesión, abre `/posts/create`.
 - **Esperado:** redirige a `/login` con el mensaje "Debes iniciar sesión para hacer esto.".
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -185,10 +185,10 @@
 
 ---
 
-### 5.7 Editar un anuncio propio
+### 5.2 Editar un anuncio propio
 - **Pasos:** pulsa "Editar" en un anuncio tuyo, cambia el título y guarda.
 - **Esperado:** el formulario viene relleno con los datos actuales. Tras guardar, redirige al anuncio y se ve el cambio.
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -196,10 +196,10 @@
 
 ---
 
-### 5.10 Borrar un anuncio propio
+### 5.3 Borrar un anuncio propio
 - **Pasos:** pulsa "Eliminar" en un anuncio tuyo y acepta la confirmación.
 - **Esperado:** redirige a `/posts`, aparece "Anuncio eliminado." y el anuncio ya no está.
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -212,7 +212,7 @@
 ### 6.1 Formulario según sesión
 - **Pasos:** abre un anuncio con sesión iniciada y luego sin ella.
 - **Esperado:** con sesión aparece el formulario "Añadir comentario". Sin sesión aparece el enlace "Inicia sesión para comentar".
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -223,7 +223,7 @@
 ### 6.2 Comentar
 - **Pasos:** escribe un comentario y pulsa "Comentar".
 - **Esperado:** vuelves al anuncio (bajando a la sección de comentarios) y ves tu comentario con tu nombre de usuario y la fecha.
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -236,7 +236,7 @@
 ### 8.1 Rutas principales
 - **Pasos:** visita `/`, `/posts`, `/posts/create`, `/posts/<id>`, `/posts/edit/<id>`, `/login`, `/register`.
 - **Esperado:** todas cargan la página correcta, sin `index.php?action=...` en la barra de direcciones.
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 
@@ -247,7 +247,7 @@
 ### 8.2 Ruta inexistente
 - **Pasos:** abre `/esto-no-existe`.
 - **Esperado:** error 404 "La página que buscas no existe.".
-- **Resultado:** `[ ]`
+- **Resultado:** `[X]`
 
 **Comentario:**
 

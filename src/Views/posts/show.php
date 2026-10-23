@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($post['title']) ?></title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <?php require __DIR__ . '/../partials/header.php'; ?>
