@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Si lo pedido es un archivo real (css, imagen...) o una carpeta real, se sirve tal cual.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Todo lo demás se envía a index.php. QSA conserva la query string (?search=...); L detiene las reglas.
+RewriteRule ^ index.php [QSA,L]

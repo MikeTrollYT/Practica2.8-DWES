@@ -1,0 +1,34 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      # Montamos el proyecto para editar en local y ver los cambios al instante.
+      - ./:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: josech123
+      MYSQL_DATABASE: tablon_anuncios
+    volumes:
+      # Volumen con nombre: los datos sobreviven aunque borres el contenedor.
+      - db_data:/var/lib/mysql
+      # Todo .sql en esta carpeta se ejecuta automáticamente la primera vez que se crea la BD.
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - "8081:80"
+    environment:
+      # Nombre del servicio MySQL dentro de la red de Docker.
+      PMA_HOST: db
+    depends_on:
+      - db
+
+volumes:
+  db_data:
