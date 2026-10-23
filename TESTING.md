@@ -17,7 +17,6 @@
 - **Esperado:** los servicios `web`, `db` y `phpmyadmin` aparecen en estado `Up`.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -28,7 +27,6 @@
 - **Esperado:** se muestra el listado de anuncios (vacío o con anuncios), sin errores de PHP.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -39,7 +37,6 @@
 - **Esperado:** aparece la base de datos `tablon_anuncios`.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -50,7 +47,6 @@
 - **Esperado:** existen `users`, `posts` y `comments`. `posts` incluye la columna `category`. Hay claves foráneas `posts.user_id`, `comments.post_id` y `comments.user_id`.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -61,7 +57,6 @@
 - **Esperado:** no aparece ese error.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -72,7 +67,6 @@
 - **Esperado:** `config.php` y `vendor/` no aparecen como archivos para subir; están ignorados.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -85,7 +79,6 @@
 - **Esperado:** redirige a `/login`.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -96,7 +89,6 @@
 - **Esperado:** el mismo mensaje de error que en 2.3.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -109,7 +101,6 @@
 - **Esperado:** redirige a `/` y la cabecera muestra tu email y el enlace "Cerrar sesión".
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -120,7 +111,6 @@
 - **Esperado:** aparece "Email o contraseña incorrectos." y no se inicia sesión.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -133,7 +123,6 @@
 - **Esperado:** aparecen todos, con título (enlazado) y categoría.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -144,7 +133,6 @@
 - **Esperado:** aparece "No hay anuncios." sin errores.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -155,7 +143,6 @@
 - **Esperado:** la URL es `/posts/<id>` y se ven título, categoría, fecha y contenido. Los saltos de línea del contenido se respetan.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -166,7 +153,6 @@
 - **Esperado:** página "Error 404 – El anuncio no existe.".
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -179,7 +165,6 @@
 - **Esperado:** redirige a `/login` con el mensaje "Debes iniciar sesión para hacer esto.".
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -190,7 +175,6 @@
 - **Esperado:** el formulario viene relleno con los datos actuales. Tras guardar, redirige al anuncio y se ve el cambio.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -201,7 +185,6 @@
 - **Esperado:** redirige a `/posts`, aparece "Anuncio eliminado." y el anuncio ya no está.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -214,7 +197,6 @@
 - **Esperado:** con sesión aparece el formulario "Añadir comentario". Sin sesión aparece el enlace "Inicia sesión para comentar".
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -225,7 +207,6 @@
 - **Esperado:** vuelves al anuncio (bajando a la sección de comentarios) y ves tu comentario con tu nombre de usuario y la fecha.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -238,7 +219,6 @@
 - **Esperado:** todas cargan la página correcta, sin `index.php?action=...` en la barra de direcciones.
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
@@ -249,7 +229,6 @@
 - **Esperado:** error 404 "La página que buscas no existe.".
 - **Resultado:** `[X]`
 
-**Comentario:**
 
 &nbsp;
 
