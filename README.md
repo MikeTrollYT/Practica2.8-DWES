@@ -39,7 +39,9 @@ Practica2.8-DWES/
 │   └── schema.sql                 # Creación de la base de datos y sus tablas
 ├── public/
 │   ├── .htaccess                  # Reescritura de URLs hacia el front controller
-│   └── index.php                  # Punto de entrada y definición de rutas
+│   ├── index.php                  # Punto de entrada y definición de rutas
+│   └── css/
+│       └── styles.css             # Estilos visuales de las páginas
 ├── src/
 │   ├── Controllers/               # Lógica de las peticiones
 │   │   ├── AuthController.php
@@ -55,7 +57,7 @@ Practica2.8-DWES/
 │   │   ├── Comment.php
 │   │   ├── Post.php
 │   │   └── User.php
-│   └── Views/                     # Plantillas HTML
+│   └── Views/                     # Plantillas HTML y PHP
 │       ├── auth/
 │       │   ├── login.php
 │       │   └── register.php
@@ -94,12 +96,7 @@ La base de datos contiene tres tablas principales: `users`, `posts` y
 tanto a un anuncio como a un usuario. Las relaciones utilizan borrado en
 cascada para evitar registros huérfanos.
 
-## Puesta en marcha con Docker
-
-### Requisitos
-
-- Docker Desktop instalado y en ejecución.
-- Docker Compose, incluido normalmente en Docker Desktop.
+## Instalación con Docker
 
 ### Arranque
 
@@ -124,7 +121,7 @@ Para detener los contenedores:
 docker compose down
 ```
 
-Para detenerlos y eliminar también los datos persistidos:
+Para detenerlos y eliminar también los datos:
 
 ```bash
 docker compose down -v
